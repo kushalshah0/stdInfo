@@ -62,7 +62,7 @@ const Dashboard = () => {
           <form className="my-2 d-flex" role="search">
             <input onChange={(e) => setSearch(e.target.value)} className="form-control" placeholder="Search" aria-label="Search" value={search} />
             <button className="btn btn-outline-success mx-2" type="submit" onClick={handleSearch}>Search</button>
-            <button className="btn btn-outline-danger" type="button" onClick={handleReset}>Reset</button>
+            <button disabled={currentPage==1&&!search} className="btn btn-outline-danger" type="button" onClick={handleReset}>Reset</button>
           </form>
 
           { loading ? (

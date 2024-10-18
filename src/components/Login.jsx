@@ -25,7 +25,7 @@ function Login() {
     }
   };
 
-  return ( user ? <Dashboard/> : 
+  return ( !user ? <Dashboard/> : 
     <div className="App">
         <div className="auth-wrapper">
           <div className="auth-inner">
